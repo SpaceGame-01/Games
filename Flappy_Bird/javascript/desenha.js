@@ -8,7 +8,7 @@ const pulo = new Audio();
 pulo.src = './efeitos/pulo.wav';
 
 const sprites = new Image();
-sprites.src = './sprites.png';
+sprites.src = './imagens/sprites.png';
 
 const canvas = document.querySelector('canvas');
 const contexto = canvas.getContext('2d');
@@ -57,10 +57,6 @@ function criaChao() {
       const repeteEm = chao.largura / 2;
       const movimentacao = chao.x - movimentoDoChao;
 
-      // console.log('[chao.x]', chao.x);
-      // console.log('[repeteEm]',repeteEm);
-      // console.log('[movimentacao]', movimentacao % repeteEm);
-      
       chao.x = movimentacao % repeteEm;
     },
     desenha() {
